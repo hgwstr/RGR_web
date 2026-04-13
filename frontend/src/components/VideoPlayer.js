@@ -9,9 +9,9 @@ const VideoPlayer = () => {
   const [video, setVideo] = useState(null);
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
-  const [chatName, setChatName] = useState("Алексей");
+  const [chatName, setChatName] = useState("Владимир");
   const [isEditingName, setIsEditingName] = useState(false);
-  const [draftName, setDraftName] = useState("Алексей");
+  const [draftName, setDraftName] = useState("Владимир");
   const [showComposer, setShowComposer] = useState(false);
   const chatEndRef = useRef(null);
 
@@ -30,12 +30,12 @@ const VideoPlayer = () => {
     fetchVideo();
 
     const demoMessages = [
-      { author: "Пользователь_0011", text: "Это что", likes: 3 },
-      { author: "Пользователь_0028", text: "Пам парам", likes: 3 },
-      { author: "Пользователь_0039", text: "Приветствую всех смотрящих", likes: 3 },
-      { author: "Пользователь_0445", text: "Соболезную", likes: 2 },
-      { author: "Пользователь_0212", text: "Я бы так тоже смог", likes: 2 },
-      { author: "Модератор_13", text: "Оскорбления - бан, читы - бан, кемперство - тоже бан", likes: 0 },
+      { author: "Итерация_01", text: "Всем привет", likes: 1 },
+      { author: "Итерация_02", text: "Всем привет", likes: 3 },
+      { author: "Итерация_04", text: "Всем привет", likes: 3 },
+      { author: "Итерация_05", text: "Всем привет", likes: 2 },
+      { author: "Итерация_03", text: "Всем привет", likes: 2 },
+      { author: "Модератор_01", text: "Оскорбления - бан, читы - бан, кемперство - бан", likes: 0 },
     ];
     setMessages(demoMessages);
   }, [id]);
@@ -122,7 +122,7 @@ const VideoPlayer = () => {
                   value={draftName}
                   onChange={(e) => setDraftName(e.target.value)}
                   onBlur={() => {
-                    const clean = draftName.trim() || "Алексей";
+                    const clean = draftName.trim() || "Владимир";
                     setChatName(clean);
                     setDraftName(clean);
                     setIsEditingName(false);

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchVideos, streamUrl } from "../api.js";
 
-const imgPattern = "https://www.figma.com/api/mcp/asset/68f34f7c-96ce-49bf-bc96-83f1c2a226a6";
+const imgYadroPattern = "https://www.figma.com/api/mcp/asset/68f34f7c-96ce-49bf-bc96-83f1c2a226a6";
 const imgLogo = "https://www.figma.com/api/mcp/asset/85055626-e7ee-455b-a5a6-470258ee3c87";
 const imgPlayerMask = "https://www.figma.com/api/mcp/asset/e4aa2568-f587-4b0e-92bb-826045f07be9";
 const imgPlayer = "https://www.figma.com/api/mcp/asset/eebf5637-a345-454c-a60c-ed93a2a1fad0";
@@ -25,12 +25,12 @@ function UserCircle() {
 }
 
 const messages = [
-  { id: 1, name: "Женя", text: "Всем привет", likes: 567, active: false },
-  { id: 2, name: "Женя", text: "Всем привет", likes: 11, active: false },
-  { id: 3, name: "Женя", text: "Всем привет", likes: 0, active: false },
-  { id: 4, name: "Женя", text: "Всем привет", likes: 15, active: true },
-  { id: 5, name: "Женя", text: "Всем привет", likes: 42, active: false },
-  { id: 6, name: "Женя", text: "Всем привет", likes: 0, active: false },
+  { id: 1, name: "Итерация_01", text: "Всем привет", likes: 2, active: false },
+  { id: 2, name: "Итерация_02", text: "Всем привет", likes: 3, active: false },
+  { id: 3, name: "Итерация_04", text: "Всем привет", likes: 3, active: false },
+  { id: 4, name: "Итерация_05", text: "Всем привет", likes: 3, active: true },
+  { id: 5, name: "Итерация_03", text: "Всем привет", likes: 3, active: false },
+  { id: 6, name: "Модератор_01", text: "Оскорбления - бан, читы - бан, кемперство - бан", likes: 0, active: false },
 ];
 
 function Translation() {
@@ -68,7 +68,7 @@ function Translation() {
 
   return (
     <section className="page-translation">
-      <div className="pattern-bg" style={{ backgroundImage: `url(${imgPattern})` }} />
+      <div className="pattern-bg" style={{ backgroundImage: `url(${imgYadroPattern})` }} />
       <header className="top-bar">
         <img className="logo" src={imgLogo} alt="Logo" />
         <div className="top-actions">
