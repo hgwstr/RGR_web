@@ -9,9 +9,9 @@ const VideoPlayer = () => {
   const [video, setVideo] = useState(null);
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
-  const [chatName, setChatName] = useState("Владимир");
+  const [chatName, setChatName] = useState("Алексей");
   const [isEditingName, setIsEditingName] = useState(false);
-  const [draftName, setDraftName] = useState("Владимир");
+  const [draftName, setDraftName] = useState("Алексей");
   const [showComposer, setShowComposer] = useState(false);
   const chatEndRef = useRef(null);
 
@@ -122,7 +122,7 @@ const VideoPlayer = () => {
                   value={draftName}
                   onChange={(e) => setDraftName(e.target.value)}
                   onBlur={() => {
-                    const clean = draftName.trim() || "Владимир";
+                    const clean = draftName.trim() || "Алексей";
                     setChatName(clean);
                     setDraftName(clean);
                     setIsEditingName(false);
